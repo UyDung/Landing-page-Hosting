@@ -1,0 +1,62 @@
+@import "mixin";
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    
+    @include respond-to("lg") {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 7rem;
+    }
+
+    &__links {
+        margin-bottom: 1rem;
+    }
+
+    &__container {
+        text-align: center;
+
+        @include respond-to("lg") {
+            text-align: left;
+        }
+
+        h1 {
+            @include respond-to("lg") {
+                font-size: 3rem;
+            }
+
+            @include respond-to("xl") {
+                font-size: 3.5rem;
+            }
+        }
+        > * {
+            display: none;
+            flex-direction: column;
+            line-height: 1.5;
+            gap: 1rem;
+        }
+
+        .btn {
+            margin-right: 1rem;
+
+            @include respond-to("lg") {
+                padding: 0.5vw 1vw;
+                margin-bottom: 1rem;
+                display: inline-block;
+                font-size: 1vw;
+            }
+        }
+
+        > .active {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    display: none;
+}

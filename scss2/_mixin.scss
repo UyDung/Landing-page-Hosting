@@ -1,0 +1,49 @@
+$screen: (
+    "sm": (
+        min-width: 640px,
+    ),
+    "md": (
+        min-width: 768px,
+    ),
+    "lg": (
+        min-width: 1024px,
+    ),
+    "xl": (
+        min-width: 1280px,
+    ),
+    "2xl": (
+        min-width: 1536px,
+    ),
+) !default;
+
+@mixin respond-to($breakpoint) {
+    @if map-has-key($screen, $breakpoint) {
+        @media #{inspect(map-get($screen, $breakpoint))} {
+            @content;
+        }
+    } @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$screen}`. "
+         + "Available breakpoints are: #{map-keys($screen)}.";
+    }
+}
+
+
+@include  respond-to('sm') {
+   
+}
+
+@include respond-to('md') {
+     
+}
+
+@include respond-to('lg') {
+     
+}
+
+@include respond-to('xl') {
+     
+}
+
+@include respond-to('2xl') {
+       
+}
