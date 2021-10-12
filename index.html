@@ -218,18 +218,23 @@
                      <div class="pricing__text">
                           <h2>Ready to get started with Lemon Wares?</h2>
                           <p>Choose the package that suits you</p>
-                          <p>Monthy</p>
-                          <span class="toogle-btn"></span>
-                          <p>Yearly</p>
-                          <span class="discount">20% discount</span>
+                          <div class="plan-show">
+                              <p>Monthy</p>
+                              <label class="toggle-btn">
+                                   <input type="checkbox">
+                                   <span class="slider"></span>
+                              </label>
+                              <p>Yearly</p>
+                              <span class="discount">20% discount</span>
+                          </div>
                      </div>
                      <!-- pricing text end -->
 
                      <!-- pricing content -->
                      <div class="pricing__content">
                           <div class="links">
-                               <button class="link">Basic</button>
-                               <button class="link">Premium</button>
+                               <span class="link active">Basic</span>
+                               <span class="link">Premium</span>
                           </div>
 
                           <div class="cards">
@@ -256,8 +261,8 @@
                                <div class="card">
                                    <h4>Standard</h4>
                                    <span>with all your customers via all conversation channels in one central dashboard.</span>
-                                   <h3 class="price">$4.20</h3>
-                                   <span>Per month</span>
+                                   <strong class="price">$4.20  <span>Per month</span></strong>
+                                  
 
                                    <button class="cta">Choose this Plan</button>
                                    <ul>

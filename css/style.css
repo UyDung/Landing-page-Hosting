@@ -273,4 +273,134 @@ body {
   text-align: center;
 }
 
+.pricing {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid #000;
+  margin-bottom: 3rem;
+}
+.pricing__text {
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+.pricing__text h2 {
+  margin-bottom: 1rem;
+}
+.pricing__text p {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+.pricing__text .plan-show {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.9rem;
+  font-style: normal;
+}
+.pricing__text .plan-show p {
+  margin: 0;
+}
+.pricing__text .toggle-btn {
+  height: 1.8rem;
+  width: 3.6rem;
+  background-color: red;
+  border-radius: 20px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+.pricing__text .toggle-btn input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.pricing__text .toggle-btn input:checked + .slider {
+  transform: translate(100%, -50%);
+}
+.pricing__text .toggle-btn .slider {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  right: 5px;
+  height: 1.5rem;
+  width: 1.5rem;
+  transform: translateY(-50%);
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.pricing__text .discount {
+  font-size: 0.7rem;
+  background-color: yellow;
+  border-radius: 5px;
+  padding: 0.15rem 0.5rem;
+}
+.pricing__content {
+  display: flex;
+  flex-direction: column;
+}
+.pricing .links {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+}
+@media (min-width: 768px) {
+  .pricing .links {
+    width: 50%;
+  }
+}
+.pricing .links .link {
+  position: relative;
+  width: 100%;
+  padding: 1rem 0;
+  border-bottom: 2px solid #666;
+}
+.pricing .links .link.active {
+  border-bottom-color: red;
+}
+.pricing .cards {
+  margin-bottom: 2rem;
+}
+.pricing .card {
+  border: 1px solid #c2bfbf;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  width: 70%;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.pricing .card h4 {
+  font-size: 1rem;
+}
+.pricing .card strong {
+  font-size: 1.3rem;
+  display: flex;
+}
+.pricing .card button {
+  display: block;
+}
+.pricing .card li {
+  position: relative;
+  padding-left: 2rem;
+  display: flex;
+  align-items: flex-end;
+}
+.pricing .card li::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/Checkmark.png");
+}
+
 /*# sourceMappingURL=style.css.map */
