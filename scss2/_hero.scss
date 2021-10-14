@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     
     @include respond-to("lg") {
         flex-direction: row;
@@ -43,6 +43,8 @@
 
         .btn {
             margin-right: 1rem;
+            display: block;
+            margin: 1rem 0;
 
             @include respond-to("lg") {
                 padding: 0.5vw 1vw;
@@ -58,5 +60,5 @@
         }
     }
 
-    display: none;
+//     display: none;
 }

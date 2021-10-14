@@ -166,8 +166,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  margin-bottom: 3rem;
-  display: none;
+  margin-bottom: 4rem;
 }
 @media (min-width: 1024px) {
   .hero {
@@ -206,6 +205,8 @@ body {
 }
 .hero__container .btn {
   margin-right: 1rem;
+  display: block;
+  margin: 1rem 0;
 }
 @media (min-width: 1024px) {
   .hero__container .btn {
@@ -223,10 +224,9 @@ body {
 .why-us {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  row-gap: 2rem;
+  row-gap: 3rem;
   text-align: center;
-  margin-bottom: 3rem;
-  display: none;
+  margin-bottom: 4rem;
 }
 @media (min-width: 768px) {
   .why-us {
@@ -277,8 +277,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  border: 1px solid #000;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 .pricing__text {
   line-height: 1.6;
@@ -360,6 +359,10 @@ body {
   width: 100%;
   padding: 1rem 0;
   border-bottom: 2px solid #666;
+  cursor: pointer;
+}
+.pricing .links .link:hover {
+  color: red;
 }
 .pricing .links .link.active {
   border-bottom-color: red;
@@ -367,32 +370,64 @@ body {
 .pricing .cards {
   margin-bottom: 2rem;
 }
+@media (min-width: 768px) {
+  .pricing .cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 70%;
+    margin: auto;
+  }
+}
 .pricing .card {
   border: 1px solid #c2bfbf;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: left;
-  width: 70%;
+  min-width: 5rem;
   margin: 2rem auto;
   padding: 1rem;
   font-size: 12px;
   line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .pricing .card {
+    min-width: 12rem;
+  }
 }
 .pricing .card h4 {
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 .pricing .card strong {
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   display: flex;
+}
+.pricing .card strong + span {
+  margin-top: -1rem;
 }
 .pricing .card button {
   display: block;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #666;
+  cursor: pointer;
+  margin: 1rem 0;
+}
+.pricing .card button:hover {
+  background-color: orangered;
+  color: #fff;
 }
 .pricing .card li {
   position: relative;
   padding-left: 2rem;
   display: flex;
   align-items: flex-end;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
 }
 .pricing .card li::before {
   position: absolute;

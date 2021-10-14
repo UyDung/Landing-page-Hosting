@@ -3,10 +3,10 @@
 .why-us {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    row-gap: 2rem;
+    row-gap: 3rem;
 
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 
     @include respond-to('md') {
           grid-template-columns: repeat(2, 1fr);
@@ -56,5 +56,5 @@
         }
     }
 
-    display: none;
+//     display: none;
 }
