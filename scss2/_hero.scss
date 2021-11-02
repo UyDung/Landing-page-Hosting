@@ -6,7 +6,7 @@
     align-items: center;
     gap: 2rem;
     margin-bottom: 4rem;
-    
+
     @include respond-to("lg") {
         flex-direction: row;
         align-items: flex-start;
@@ -60,5 +60,5 @@
         }
     }
 
-//     display: none;
+    //     display: none;
 }

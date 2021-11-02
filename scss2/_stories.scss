@@ -1,0 +1,23 @@
+@import "mixin";
+
+.stories {
+    img {
+        max-width: 120px;
+    }
+
+    &__first {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+        margin: auto;
+
+        @include respond-to("md") {
+            max-width: 100%;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &-item {
+        min-width: 15rem;
+    }
+}

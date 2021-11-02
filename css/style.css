@@ -41,6 +41,22 @@ body {
   background-color: orangered;
 }
 
+.card {
+  border: 1px solid #c2bfbf;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  min-width: 5rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-size: 12px;
+  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
 .wrapper {
   min-width: 320px;
   margin: auto;
@@ -348,6 +364,7 @@ body {
   width: 60%;
   margin: 0 auto;
   display: flex;
+  margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .pricing .links {
@@ -360,12 +377,28 @@ body {
   padding: 1rem 0;
   border-bottom: 2px solid #666;
   cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .pricing .links .link:hover {
   color: red;
 }
-.pricing .links .link.active {
-  border-bottom-color: red;
+.pricing .links .link::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  transform-origin: 0 50%;
+  border-bottom: 2px solid red;
+  transform: scale(0);
+  transition: all 0.3s ease-out;
+}
+.pricing .links .link:hover::after {
+  transform: scale(1);
+  transform: scaleY(1);
 }
 .pricing .cards {
   margin-bottom: 2rem;
@@ -436,6 +469,25 @@ body {
   width: 24px;
   height: 24px;
   background-image: url("../images/Checkmark.png");
+}
+
+.stories img {
+  max-width: 120px;
+}
+.stories__first {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .stories__first {
+    max-width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.stories-item {
+  min-width: 15rem;
 }
 
 /*# sourceMappingURL=style.css.map */
